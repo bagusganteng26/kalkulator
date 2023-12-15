@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <title>Calculator</title>
+
+  <style>
+
+    body {
+
+      font-family: sans-serif;
+
+    }
+
+   
+
+    h1 {
+
+      text-align: center;
+
+    }
+
+   
+
+    .calculator {
+
+      display: flex;
+
+      flex-direction: column;
+
+      align-items: center;
+
+      background: #eee;
+
+      border: 1px solid #ccc;
+
+      border-radius: 3px;
+
+      padding: 10px;
+
+      width: 290px;
+
+    }
+
+   
+
+    .calculator > * {
+
+      margin: 5px 0;
+
+    }
+
+   
+
+    .calculator > .screen {
+
+      width: 100%;
+
+      height: 40px;
+
+      font-size: 22px;
+
+      text-align: right;
+
+      border: 1px solid #ccc;
+
+      border-radius: 3px;
+
+      padding: 5px;
+
+      box-shadow: inset 0 1px 3px #ddd;
+
+    }
+
+   
+
+    .calculator > .buttons {
+
+      display: grid;
+
+      grid-template-columns: repeat(4, 1fr);
+
+      grid-column-gap: 10px;
+
+      grid-row-gap: 10px;
+
+    }
+
+   
+
+    .calculator > .buttons > button {
+
+      width: 100%;
+
+      height: 40px;
+
+      font-size: 22px;
+
+      background: #eee;
+
+      border: 1px solid #ccc;
+
+      border-radius: 3px;
+
+      cursor: pointer;
+
+      box-shadow: 0 1px 3px #ddd;
+
+    }
+
+   
+
+    .calculator > .buttons > button:hover {
+
+      background: #ddd;
+
+    }
+
+   
+
+    .calculator > .buttons > button.special {
+
+      background: #ccc;
+
+      box-shadow: none;
+
+    }
+
+   
+
+    .calculator > .buttons > button.special:hover {
+
+      background: #ccc;
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <h1>Calculator</h1>
+
+  <div class="calculator">
+
+    <input type="text" class="screen" value="0" />
+
+    <div class="buttons">
+
+      <button onclick="clearInput()" class="special">AC</button>
+
+      <button onclick="deleteLastChar()" class="special">Del</button>
+
+      <button onclick="addToInput('/')" class="special">/</button>
+
+      <button onclick="addToInput('*')" class="special">*</button>
+
+      <button onclick="addToInput(7)">7</button>
+
+      <button onclick="addToInput(8)">8</button>
+
+      <button onclick="addToInput(9)">9</button>
+
+      <button onclick="addToInput('-')" class="special">-</button>
+
+      <button onclick="addToInput(4)">4</button>
+
+      <button onclick="addToInput(5)">5</button>
+
+      <button onclick="addToInput(6)">6</button>
+
+      <button onclick="addToInput('+')" class="special">+</button>
+
+      <button onclick="addToInput(1)">1</button>
+
+      <button onclick="addToInput(2)">2</button>
+
+      <button onclick="addToInput(3)">3</button>
+
+      <button onclick="calculate()" class="special">=</button>
+
+      <button onclick="addToInput(0)">0</button>
+
+      <button onclick="addToInput('.')">.</button>
+
+    </div>
+
+  </div>
+
+  <script src="script.js">
+
+  </script>
+
+</body>
+
+</html>
